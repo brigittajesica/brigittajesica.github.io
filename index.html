@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brigitta Jesica Kartono</title>
+  <meta name="description" content="Brigitta Jesica Kartono — PhD candidate in AI Ethics & Safety at TUM and Tech Lead of the AI Moderation Layer at BMW Group. Research on LLM security, safety evaluation, and policy alignment." />
+  <script>
+    // Apply saved theme before paint to avoid a flash. Dark is the default.
+    if (localStorage.getItem('theme') === 'light') document.documentElement.classList.remove('dark');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="avatar">
+        <img class="avatar-img" src="jpg/jesica_hq.jpg" alt="Brigitta Jesica Kartono"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <span class="avatar-fallback">BJK</span>
+      </div>
+      <div class="hero-text">
+        <div class="name-row">
+          <h1 class="name">Brigitta Jesica Kartono</h1>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+        </div>
+        <p class="role">PhD Candidate @ IEAI &nbsp;&middot;&nbsp; Tech Lead, AI Moderation Layer @ BMW</p>
+        <p class="affil-inline">
+          Institute for Ethics in AI, <strong>TU Munich</strong>
+          <span class="dot">·</span> AI Moderation Layer, <strong>BMW Group</strong>
+          <span class="dot">·</span> Munich, Germany
+        </p>
+
+        <div class="socials">
+          <a href="mailto:brigittajesicak@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/brigittajesica" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10.4H5.67v7.94h2.67zM7 9.24a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.1v-4.36c0-2.33-1.24-3.41-2.9-3.41a2.5 2.5 0 0 0-2.27 1.25h-.04V10.4h-2.56c.03.72 0 7.94 0 7.94h2.56v-4.43c0-.24.02-.47.09-.64.18-.47.62-.96 1.34-.96.95 0 1.33.72 1.33 1.78v4.25h2.55z"/></svg>
+          </a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar (update link)">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 2 1 8.5l11 6.5 9-5.32V16h2V8.5L12 2zM5 13.18v3.5L12 21l7-4.32v-3.5L12 17.5 5 13.18z"/></svg>
+          </a>
+          <a class="cv-btn" href="Brigitta_Jesica_Kartono_CV.pdf" target="_blank" rel="noopener" aria-label="Download CV (PDF)">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== STICKY NAV ===================== -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="#top" class="topnav-brand">Brigitta&nbsp;Jesica&nbsp;Kartono</a>
+      <div class="topnav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#journey">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="layout">
+    <!-- ===================== MAIN ===================== -->
+    <main class="content">
+      <!-- ABOUT -->
+      <section id="about" class="block">
+        <p class="intro">
+          I am a PhD candidate at the
+          <a href="https://www.ieai.sot.tum.de/" target="_blank" rel="noopener">TUM Institute for Ethics in AI</a>
+          (advised by Prof.&nbsp;Dr.&nbsp;Christoph&nbsp;Lütge) and Tech Lead of the AI Moderation Layer at
+          <a href="https://www.bmwgroup.com/" target="_blank" rel="noopener">BMW Group</a>. I work on
+          <strong>AI safety</strong>: I build guardrails, red-teaming systems, and organizational safety
+          and compliance frameworks that keep large language models safe once they are actually deployed.
+        </p>
+        <p>
+          Lately my work has centered on adversarial red-teaming and the security of multimodal
+          models: vision-language models, AI agents, and audio systems. I'm also interested in
+          benchmarking organizational AI governance and the ethics of using GenAI in real products.
+        </p>
+      </section>
+
+      <!-- NEWS -->
+      <section id="news" class="block">
+        <h2 class="block-title">News</h2>
+        <ul class="news">
+          <li>
+            <span class="news-date">Apr 2026</span>
+            <span class="news-text">Our paper <a href="https://arxiv.org/abs/2601.01836" target="_blank" rel="noopener">COMPASS</a> is accepted to <strong>ACL 2026</strong> (Main Conference)! 🎉</span>
+          </li>
+          <li>
+            <span class="news-date">Mar 2026</span>
+            <span class="news-text">Started my PhD in AI Ethics &amp; Safety at the <a href="https://www.ieai.sot.tum.de/" target="_blank" rel="noopener">TUM Institute for Ethics in AI</a>.</span>
+          </li>
+          <li>
+            <span class="news-date">Mar 2025</span>
+            <span class="news-text">Completed my M.Sc. in Electrical Engineering &amp; Information Technology <em>with distinction</em>.</span>
+          </li>
+          <li>
+            <span class="news-date">Jul 2024</span>
+            <span class="news-text">Joined <a href="https://www.bmwgroup.com/" target="_blank" rel="noopener">BMW Group</a> as an AI Software Engineer, now Tech Lead of the AI Moderation Layer.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section id="publications" class="block">
+        <h2 class="block-title">Publications</h2>
+
+        <div class="pub-filter" role="tablist" aria-label="Filter publications by topic">
+          <button class="chip active" data-filter="all">All <span class="chip-count">2</span></button>
+          <button class="chip" data-filter="safety">LLM Safety <span class="chip-count">2</span></button>
+          <button class="chip" data-filter="policy">Policy Alignment <span class="chip-count">1</span></button>
+          <button class="chip" data-filter="evaluation">Evaluation <span class="chip-count">1</span></button>
+          <button class="chip" data-filter="benchmarks">Benchmarks <span class="chip-count">1</span></button>
+          <button class="chip" data-filter="cross-cultural">Cross-Cultural <span class="chip-count">1</span></button>
+        </div>
+
+        <div class="pub-list">
+          <article class="pub" data-topics="policy safety evaluation">
+            <div class="pub-top">
+              <span class="pub-tag pub-tag--accepted">ACL 2026</span>
+              <a class="pub-link" href="https://arxiv.org/abs/2601.01836" target="_blank" rel="noopener">Link to paper &rarr;</a>
+            </div>
+            <h3 class="pub-title">COMPASS: A Framework for Evaluating Organization-Specific Policy Alignment in LLMs</h3>
+            <p class="pub-authors">
+              Dasol Choi*, DongGeon Lee*, <strong>Brigitta Jesica Kartono*</strong>, Helena Berndt,
+              Haon Park, Hwanjo Yu, Minsuk Kahng
+            </p>
+            <p class="pub-venue">Annual Meeting of the Association for Computational Linguistics (ACL 2026), Main Conference</p>
+            <p class="pub-eq"><span>*</span> Equal contribution</p>
+            <div class="pub-topics">
+              <span data-topic="policy">Policy Alignment</span>
+              <span data-topic="safety">LLM Safety</span>
+              <span data-topic="evaluation">Evaluation</span>
+            </div>
+          </article>
+
+          <article class="pub" data-topics="safety benchmarks cross-cultural">
+            <div class="pub-top">
+              <span class="pub-tag pub-tag--review">Under Review</span>
+              <a class="pub-link" href="https://arxiv.org/abs/2605.05662" target="_blank" rel="noopener">Link to paper &rarr;</a>
+            </div>
+            <h3 class="pub-title">XL-SafetyBench: A Country-Grounded Cross-Cultural Benchmark for LLM Safety and Cultural Sensitivity</h3>
+            <p class="pub-authors">
+              Dasol Choi, Eugenia Kim, Jaewon Noh, Sang Seo, Eunmi Kim, Myunggyo Oh, Yunjin Park,
+              <strong>Brigitta Jesica Kartono</strong>, Josef Pichlmeier, Helena Berndt, Sai Krishna Mendu,
+              Glenn Johannes Tungka, Özlem Gökçe, Suresh Gehlot, Katherine Pratt, Amanda Minnich, Haon Park
+            </p>
+            <div class="pub-topics">
+              <span data-topic="safety">LLM Safety</span>
+              <span data-topic="benchmarks">Benchmarks</span>
+              <span data-topic="cross-cultural">Cross-Cultural</span>
+            </div>
+          </article>
+
+          <p class="pub-empty" hidden>No publications in this topic yet.</p>
+        </div>
+      </section>
+
+      <!-- JOURNEY / EXPERIENCE -->
+      <section id="journey" class="block">
+        <h2 class="block-title">Experience</h2>
+        <div class="timeline">
+          <div class="tl-row">
+            <div class="tl-when">Jul 2024 — Present</div>
+            <div class="tl-card">
+              <h3>Tech Lead, AI Moderation Layer</h3>
+              <p class="tl-org">BMW Group · Munich</p>
+              <p>I lead the AI Moderation Layer, BMW's central guardrailing service for LLM
+                 applications. My team builds the checks that catch unsafe or off-policy model
+                 behaviour, and we red-team our own systems to find jailbreaks before anyone else
+                 does. It shipped with BMW's first customer-facing chatbot.</p>
+              <div class="tl-tags"><span>LLM Security</span><span>Guardrails</span><span>Red Teaming</span><span>Policy</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Apr 2022 — Jun 2024</div>
+            <div class="tl-card">
+              <h3>Fastlane Scholarship Holder</h3>
+              <p class="tl-org">BMW Group · Munich</p>
+              <p>BMW's talent-development scholarship. I wrote my master's thesis on security for
+                 GenAI chatbots with the AI Platforms team, and rotated through data-analytics and
+                 E/E architecture projects along the way.</p>
+              <div class="tl-tags"><span>GenAI Security</span><span>Data Analytics</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Oct 2023 — Feb 2024</div>
+            <div class="tl-card">
+              <h3>Data Scientist, Intern</h3>
+              <p class="tl-org">BMW Japan · Tokyo</p>
+              <p>Built map-based analytics for navigation and connected BMW HQ with the engineering
+                 teams in Tokyo.</p>
+              <div class="tl-tags"><span>Analytics</span><span>Cross-functional</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Jun 2023 — Feb 2024</div>
+            <div class="tl-card">
+              <h3>Teaching Assistant</h3>
+              <p class="tl-org">Technical University of Munich · Munich</p>
+              <p>Ran a hands-on Python workshop covering NumPy, Pandas, web scraping, and intro
+                 machine learning.</p>
+              <div class="tl-tags"><span>Teaching</span><span>Python</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Jun 2023 — Aug 2023</div>
+            <div class="tl-card">
+              <h3>Research Intern · AI for Medical Applications Lab</h3>
+              <p class="tl-org">Gwangju Institute of Science and Technology (GIST) · Gwangju</p>
+              <p>Built a 3D CycleGAN pipeline to synthesize Amyloid PET scans from structural MRI,
+                 with image registration aligning the two modalities.</p>
+              <div class="tl-tags"><span>Deep Learning</span><span>Medical Imaging</span><span>GANs</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Apr 2023 — Jul 2023</div>
+            <div class="tl-card">
+              <h3>Machine Learning Engineer, Working Student</h3>
+              <p class="tl-org">Infineon Technologies · Warstein</p>
+              <p>Built anomaly-detection models that combined MES data with equipment logs to
+                 improve yield on pick-and-place lines.</p>
+              <div class="tl-tags"><span>Machine Learning</span><span>Manufacturing</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Apr 2022 — Mar 2023</div>
+            <div class="tl-card">
+              <h3>Software Test Engineer, Working Student</h3>
+              <p class="tl-org">Rohde &amp; Schwarz · Munich</p>
+              <p>Wrote Python modules to automate testing for signal generators and power meters,
+                 and modernised the legacy test suite with Pytest and Jenkins.</p>
+              <div class="tl-tags"><span>Python</span><span>Test Automation</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Jun 2021 — Mar 2022</div>
+            <div class="tl-card">
+              <h3>Data Scientist, Working Student</h3>
+              <p class="tl-org">BMW Group · Munich</p>
+              <p>Built data pipelines and interactive Dash/Plotly dashboards on Palantir Foundry
+                 to support data-driven decisions.</p>
+              <div class="tl-tags"><span>Python</span><span>Dashboards</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Sept 2020 — Jun 2021</div>
+            <div class="tl-card">
+              <h3>Field Application Engineer, Working Student</h3>
+              <p class="tl-org">Veridos GmbH · Munich</p>
+              <p>Built chip-initialisation tooling in C# and Power BI reporting to streamline
+                 production, and ran basic analytics training for the team.</p>
+              <div class="tl-tags"><span>C#</span><span>Power BI</span></div>
+            </div>
+          </div>
+
+          <div class="tl-row">
+            <div class="tl-when">Mar 2020 — Jun 2020</div>
+            <div class="tl-card">
+              <h3>Software Engineer, Intern</h3>
+              <p class="tl-org">Softing AG · Munich</p>
+              <p>Prototyped microcontroller software in C/C++ on Linux for embedded systems, with
+                 supporting technical documentation.</p>
+              <div class="tl-tags"><span>C/C++</span><span>Embedded</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="block">
+        <h2 class="block-title">Education</h2>
+        <div class="edu">
+          <div class="edu-row">
+            <div class="edu-when">2026 — Present</div>
+            <div class="edu-body">
+              <h3>Ph.D. Candidate, AI Ethics &amp; Safety</h3>
+              <p>Technical University of Munich · Institute for Ethics in AI</p>
+              <p class="edu-sub">Advisor: Prof. Dr. Christoph Lütge</p>
+            </div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-when">2021 — 2024</div>
+            <div class="edu-body">
+              <h3>M.Sc. Electrical Engineering &amp; Information Technology</h3>
+              <p>Technical University of Munich · Distinction</p>
+              <p class="edu-sub">Thesis: Security Measures for GenAI Chatbots in the Automotive Industry (1.0)</p>
+            </div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-when">2018 — 2021</div>
+            <div class="edu-body">
+              <h3>B.Sc. Electrical Engineering &amp; Information Technology</h3>
+              <p>Technical University of Munich</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AWARDS -->
+      <section id="awards" class="block">
+        <h2 class="block-title">Awards &amp; Scholarships</h2>
+        <ul class="awards">
+          <li>
+            <span class="award-badge">★</span>
+            <div>
+              <strong>BMW Fastlane Scholarship</strong>
+              <span class="award-date">Apr 2022 — Jun 2024</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="block">
+        <h2 class="block-title">Contact</h2>
+        <p class="contact-text">The quickest ways to reach me:</p>
+        <div class="contact-links">
+          <a class="contact-btn primary" href="mailto:brigittajesicak@gmail.com">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email
+          </a>
+          <a class="contact-btn" href="https://www.linkedin.com/in/brigittajesica" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10.4H5.67v7.94h2.67zM7 9.24a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.1v-4.36c0-2.33-1.24-3.41-2.9-3.41a2.5 2.5 0 0 0-2.27 1.25h-.04V10.4h-2.56c.03.72 0 7.94 0 7.94h2.56v-4.43c0-.24.02-.47.09-.64.18-.47.62-.96 1.34-.96.95 0 1.33.72 1.33 1.78v4.25h2.55z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <p>© <span id="year"></span> Brigitta Jesica Kartono · Built with plain HTML &amp; CSS.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    // Dark is the default; only honour an explicit 'light' choice.
+    if (localStorage.getItem('theme') === 'light') root.classList.remove('dark');
+    else root.classList.add('dark');
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // About tabs
+    const tabs = [...document.querySelectorAll('.tab')];
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const panelId = tab.getAttribute('aria-controls');
+        tabs.forEach(t => {
+          const selected = t === tab;
+          t.classList.toggle('active', selected);
+          t.setAttribute('aria-selected', selected ? 'true' : 'false');
+          const panel = document.getElementById(t.getAttribute('aria-controls'));
+          panel.classList.toggle('active', selected);
+          panel.hidden = !selected;
+        });
+      });
+    });
+
+    // Publication topic filter
+    const chips = [...document.querySelectorAll('.pub-filter .chip')];
+    const pubs = [...document.querySelectorAll('.pub-list .pub')];
+    const emptyMsg = document.querySelector('.pub-empty');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filter = chip.dataset.filter;
+        chips.forEach(c => c.classList.toggle('active', c === chip));
+        let visible = 0;
+        pubs.forEach(pub => {
+          const topics = pub.dataset.topics.split(' ');
+          const show = filter === 'all' || topics.includes(filter);
+          pub.classList.toggle('is-hidden', !show);
+          if (show) visible++;
+        });
+        if (emptyMsg) emptyMsg.hidden = visible !== 0;
+      });
+    });
+    // Clicking a topic tag on a card activates that filter
+    document.querySelectorAll('.pub-topics span').forEach(tag => {
+      tag.addEventListener('click', () => {
+        const chip = chips.find(c => c.dataset.filter === tag.dataset.topic);
+        if (chip) chip.click();
+        document.getElementById('publications').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Scroll-spy for side nav
+    const navLinks = [...document.querySelectorAll('.topnav-links a')];
+    const sections = navLinks.map(a => document.querySelector(a.getAttribute('href')));
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = '#' + e.target.id;
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id));
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(s => s && spy.observe(s));
+
+    // Reveal the nav brand only after the hero (big name) scrolls out of view
+    const nav = document.querySelector('.topnav');
+    const hero = document.getElementById('top');
+    if (nav && hero) {
+      const brandSpy = new IntersectionObserver(([e]) => {
+        nav.classList.toggle('brand-visible', !e.isIntersecting);
+      }, { rootMargin: '-58px 0px 0px 0px' });
+      brandSpy.observe(hero);
+    }
+  </script>
+</body>
+</html>
