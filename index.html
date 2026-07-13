@@ -15,9 +15,47 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ===================== HERO (on top; docks to the side on scroll) ===================== -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="avatar">
+        <img class="avatar-img" src="jpg/jesica_hq.jpg" alt="Brigitta Jesica Kartono"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+        <span class="avatar-fallback">BJK</span>
+      </div>
+      <div class="hero-text">
+        <div class="name-row">
+          <h1 class="name">Brigitta Jesica Kartono</h1>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+        </div>
+        <p class="role">PhD Candidate @ IEAI &nbsp;&middot;&nbsp; Tech Lead, AI Moderation Layer @ BMW</p>
+        <p class="affil-inline">
+          Institute for Ethics in AI, <strong>TU Munich</strong>
+          <span class="dot">·</span> AI Moderation Layer, <strong>BMW Group</strong>
+          <span class="dot">·</span> Munich, Germany
+        </p>
+        <div class="socials">
+          <a href="mailto:brigittajesicak@gmail.com" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/brigittajesica" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10.4H5.67v7.94h2.67zM7 9.24a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.1v-4.36c0-2.33-1.24-3.41-2.9-3.41a2.5 2.5 0 0 0-2.27 1.25h-.04V10.4h-2.56c.03.72 0 7.94 0 7.94h2.56v-4.43c0-.24.02-.47.09-.64.18-.47.62-.96 1.34-.96.95 0 1.33.72 1.33 1.78v4.25h2.55z"/></svg>
+          </a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar (update link)">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 2 1 8.5l11 6.5 9-5.32V16h2V8.5L12 2zM5 13.18v3.5L12 21l7-4.32v-3.5L12 17.5 5 13.18z"/></svg>
+          </a>
+          <a class="cv-btn" href="Brigitta_Jesica_Kartono_CV.pdf" target="_blank" rel="noopener" aria-label="Download CV (PDF)">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <div class="layout">
-    <!-- ===================== STICKY PROFILE SIDEBAR ===================== -->
-    <aside class="sidebar" id="top">
+    <!-- ===================== STICKY PROFILE SIDEBAR (docks in on scroll) ===================== -->
+    <aside class="sidebar">
       <div class="profile">
         <div class="avatar">
           <img class="avatar-img" src="jpg/jesica_hq.jpg" alt="Brigitta Jesica Kartono"
@@ -26,7 +64,7 @@
         </div>
         <div class="name-row">
           <h1 class="name">Brigitta Jesica Kartono</h1>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <button class="theme-toggle" aria-label="Toggle dark mode">
             <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           </button>
@@ -347,14 +385,15 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
     // Dark is the default; only honour an explicit 'light' choice.
     if (localStorage.getItem('theme') === 'light') root.classList.remove('dark');
     else root.classList.add('dark');
-    toggle.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        root.classList.toggle('dark');
+        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
+      });
     });
 
     // About tabs
@@ -412,6 +451,15 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(s => s && spy.observe(s));
+
+    // Dock the sidebar once the hero scrolls out of view
+    const hero = document.getElementById('top');
+    if (hero) {
+      const dockSpy = new IntersectionObserver(([e]) => {
+        document.body.classList.toggle('docked', !e.isIntersecting);
+      }, { rootMargin: '-40px 0px 0px 0px' });
+      dockSpy.observe(hero);
+    }
   </script>
 </body>
 </html>

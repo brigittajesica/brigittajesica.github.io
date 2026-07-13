@@ -156,7 +156,11 @@ strong { font-weight: 600; }
   position: sticky; top: 0; align-self: start;
   max-height: 100vh; overflow-y: auto;
   padding: 44px 4px 24px 0;
+  opacity: 0; transform: translateX(-10px);
+  transition: opacity .45s ease, transform .45s ease;
 }
+/* Reveal the sidebar once the hero has scrolled away */
+body.docked .sidebar { opacity: 1; transform: none; }
 .profile .avatar { width: 172px; height: 172px; margin: 0 0 20px; }
 .profile .name-row { margin: 0 0 8px; }
 .sidebar .name { font-size: clamp(23px, 2vw, 27px); }
@@ -360,10 +364,12 @@ strong { font-weight: 600; }
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 860px) {
+  .hero { display: none; }
   .layout { grid-template-columns: 1fr; gap: 0; padding: 0 22px; }
   .sidebar {
     position: static; max-height: none; overflow: visible;
     padding: 36px 0 8px; text-align: center;
+    opacity: 1; transform: none;
   }
   .profile .avatar { width: 150px; height: 150px; margin: 0 auto 18px; }
   .profile .name-row { justify-content: center; }
