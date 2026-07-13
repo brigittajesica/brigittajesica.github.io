@@ -147,20 +147,25 @@ strong { font-weight: 600; }
 /* ===================== LAYOUT ===================== */
 .layout {
   max-width: 1080px; margin: 0 auto; padding: 0 28px;
-  display: grid; grid-template-columns: 288px 1fr; gap: 56px;
+  display: grid; grid-template-columns: 0px minmax(0, 1fr); gap: 0px;
   align-items: start;
+  transition: grid-template-columns .6s cubic-bezier(.22, .61, .36, 1),
+              gap .6s cubic-bezier(.22, .61, .36, 1);
 }
+/* Once docked, open up the sidebar column */
+body.docked .layout { grid-template-columns: 288px minmax(0, 1fr); gap: 56px; }
 
 /* ===================== STICKY PROFILE SIDEBAR ===================== */
 .sidebar {
   position: sticky; top: 0; align-self: start;
-  max-height: 100vh; overflow-y: auto;
+  max-height: 100vh; overflow-y: auto; overflow-x: hidden;
   padding: 44px 4px 24px 0;
-  opacity: 0; transform: translateX(-10px);
-  transition: opacity .45s ease, transform .45s ease;
+  opacity: 0; transform: translateX(-12px); pointer-events: none;
+  transition: opacity .55s cubic-bezier(.22, .61, .36, 1),
+              transform .55s cubic-bezier(.22, .61, .36, 1);
 }
 /* Reveal the sidebar once the hero has scrolled away */
-body.docked .sidebar { opacity: 1; transform: none; }
+body.docked .sidebar { opacity: 1; transform: none; pointer-events: auto; }
 .profile .avatar { width: 172px; height: 172px; margin: 0 0 20px; }
 .profile .name-row { margin: 0 0 8px; }
 .sidebar .name { font-size: clamp(23px, 2vw, 27px); }
@@ -180,7 +185,8 @@ body.docked .sidebar { opacity: 1; transform: none; }
 .side-nav a.active { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
 
 /* ===================== CONTENT ===================== */
-.content { padding: 48px 0 40px; min-width: 0; }
+.content { padding: 48px 0 40px; min-width: 0; max-width: 780px; margin: 0 auto; }
+body.docked .content { margin: 0; }
 .block { margin-bottom: 52px; }
 .block-title {
   font-family: var(--font-serif); font-size: 22px; font-weight: 600; margin: 0 0 22px;
@@ -365,12 +371,14 @@ body.docked .sidebar { opacity: 1; transform: none; }
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 860px) {
   .hero { display: none; }
-  .layout { grid-template-columns: 1fr; gap: 0; padding: 0 22px; }
+  .layout,
+  body.docked .layout { grid-template-columns: 1fr; gap: 0; padding: 0 22px; }
   .sidebar {
     position: static; max-height: none; overflow: visible;
     padding: 36px 0 8px; text-align: center;
-    opacity: 1; transform: none;
+    opacity: 1; transform: none; pointer-events: auto;
   }
+  .content, body.docked .content { max-width: none; margin: 0; }
   .profile .avatar { width: 150px; height: 150px; margin: 0 auto 18px; }
   .profile .name-row { justify-content: center; }
   .sidebar .socials { justify-content: center; }
