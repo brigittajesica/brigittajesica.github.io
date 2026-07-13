@@ -15,15 +15,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===================== HERO ===================== -->
-  <header class="hero" id="top">
-    <div class="hero-inner">
-      <div class="avatar">
-        <img class="avatar-img" src="jpg/jesica_hq.jpg" alt="Brigitta Jesica Kartono"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
-        <span class="avatar-fallback">BJK</span>
-      </div>
-      <div class="hero-text">
+  <div class="layout">
+    <!-- ===================== STICKY PROFILE SIDEBAR ===================== -->
+    <aside class="sidebar" id="top">
+      <div class="profile">
+        <div class="avatar">
+          <img class="avatar-img" src="jpg/jesica_hq.jpg" alt="Brigitta Jesica Kartono"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <span class="avatar-fallback">BJK</span>
+        </div>
         <div class="name-row">
           <h1 class="name">Brigitta Jesica Kartono</h1>
           <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -31,7 +31,7 @@
             <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
           </button>
         </div>
-        <p class="role">PhD Candidate @ IEAI &nbsp;&middot;&nbsp; Tech Lead, AI Moderation Layer @ BMW</p>
+        <p class="role">PhD Candidate @ IEAI &middot; Tech Lead, AI Moderation Layer @ BMW</p>
         <p class="affil-inline">
           Institute for Ethics in AI, <strong>TU Munich</strong>
           <span class="dot">·</span> AI Moderation Layer, <strong>BMW Group</strong>
@@ -51,14 +51,8 @@
           <a class="cv-btn" href="Brigitta_Jesica_Kartono_CV.pdf" target="_blank" rel="noopener" aria-label="Download CV (PDF)">Download CV</a>
         </div>
       </div>
-    </div>
-  </header>
 
-  <!-- ===================== STICKY NAV ===================== -->
-  <nav class="topnav">
-    <div class="topnav-inner">
-      <a href="#top" class="topnav-brand">Brigitta&nbsp;Jesica&nbsp;Kartono</a>
-      <div class="topnav-links">
+      <nav class="side-nav">
         <a href="#about">About</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
@@ -66,11 +60,9 @@
         <a href="#education">Education</a>
         <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+      </nav>
+    </aside>
 
-  <div class="layout">
     <!-- ===================== MAIN ===================== -->
     <main class="content">
       <!-- ABOUT -->
@@ -409,7 +401,7 @@
     });
 
     // Scroll-spy for side nav
-    const navLinks = [...document.querySelectorAll('.topnav-links a')];
+    const navLinks = [...document.querySelectorAll('.side-nav a')];
     const sections = navLinks.map(a => document.querySelector(a.getAttribute('href')));
     const spy = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -420,16 +412,6 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(s => s && spy.observe(s));
-
-    // Reveal the nav brand only after the hero (big name) scrolls out of view
-    const nav = document.querySelector('.topnav');
-    const hero = document.getElementById('top');
-    if (nav && hero) {
-      const brandSpy = new IntersectionObserver(([e]) => {
-        nav.classList.toggle('brand-visible', !e.isIntersecting);
-      }, { rootMargin: '-58px 0px 0px 0px' });
-      brandSpy.observe(hero);
-    }
   </script>
 </body>
 </html>
